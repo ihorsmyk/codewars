@@ -46,7 +46,6 @@ function formatDuration(seconds) {
       return `${resArr[0]}, ${resArr[1]}, ${resArr[2]}, ${resArr[3]} and ${resArr[4]}`;
   }
 }
-
 // console.log(formatDuration(0));
 // console.log(formatDuration(62));
 // console.log(formatDuration(34564));
@@ -77,8 +76,6 @@ function isHappy(n) {
   }
   return res;
 }
-
-// console.log(isHappy(1));
 // console.log(isHappy(3));
 // console.log(isHappy(7));
 // console.log(isHappy(16));
@@ -93,7 +90,16 @@ function isIsogram(str) {
     .filter((el, i, arr) => arr.indexOf(el) === i);
   return arrTest.length === str.length;
 }
-
 // console.log(isIsogram('Dermatoglyphics'));
 // console.log(isIsogram('moose'));
 // console.log(isIsogram('aba'));
+
+/**7 kyu
+Is this a triangle? */
+function isTriangle(a, b, c) {
+  const arr = [...arguments].sort((a, b) => b - a);
+  return arr[0] < arr[1] + arr[2];
+}
+// console.log(isTriangle(2, 2, 2));
+// console.log(isTriangle(7, 2, 2));
+
