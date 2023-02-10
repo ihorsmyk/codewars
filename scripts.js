@@ -103,3 +103,18 @@ function isTriangle(a, b, c) {
 // console.log(isTriangle(2, 2, 2));
 // console.log(isTriangle(7, 2, 2));
 
+/**6 kyu
+Hamming Distance */
+function hamming(a, b) {
+  // Implement me!
+  let res = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) {
+      res++;
+    }
+  }
+  return res;
+}
+// console.log(hamming('I like turtles', 'I like turkeys'));
+// console.log(hamming('Hello World', 'Hello World'));
+// console.log(hamming('hello world', 'hello tokyo'));
