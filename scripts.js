@@ -118,3 +118,29 @@ function hamming(a, b) {
 // console.log(hamming('I like turtles', 'I like turkeys'));
 // console.log(hamming('Hello World', 'Hello World'));
 // console.log(hamming('hello world', 'hello tokyo'));
+
+/**7 kyu
+Get the Middle Character */
+function getMiddle(s) {
+  //Code goes here!
+  return s.length % 2 === 0 ? `${s[s.length / 2 - 1]}${s[s.length / 2]}` : `${s[Math.floor(s.length / 2)]}`;
+}
+// console.log(getMiddle('test'));
+// console.log(getMiddle('testing'));
+// console.log(getMiddle('middle'));
+// console.log(getMiddle('A'));
+
+/**6 kyu
+Build Tower */
+function towerBuilder(nFloors) {
+  // build here
+  const res = [];
+  for (let i = 1; i <= nFloors; i++) {
+    const ast = '*'.repeat(i * 2 - 1);
+    const spc = ' '.repeat(nFloors - i);
+    res.push(spc + ast + spc);
+  }
+  return res;
+}
+console.log(towerBuilder(3));
+console.log(towerBuilder(5));
