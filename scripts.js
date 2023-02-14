@@ -142,5 +142,22 @@ function towerBuilder(nFloors) {
   }
   return res;
 }
-console.log(towerBuilder(3));
-console.log(towerBuilder(5));
+// console.log(towerBuilder(3));
+// console.log(towerBuilder(5));
+
+/**6 kyu
+Two Sum */
+function twoSum(numbers, target) {
+  // ...
+  const res = [];
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === target) {
+        res.push(i);
+        res.push(j);
+        return res;
+      }
+    }
+  }
+}
+// console.log(twoSum([1, 2, 3], 4));
