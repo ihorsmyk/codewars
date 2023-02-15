@@ -161,3 +161,10 @@ function twoSum(numbers, target) {
   }
 }
 // console.log(twoSum([1, 2, 3], 4));
+
+/**7 kyu
+Sum The Array */
+Array.prototype.sum = function () {
+  return this.reduce((pr, el) => pr + el, 0);
+};
+// console.log([1, 3, 6].sum());
