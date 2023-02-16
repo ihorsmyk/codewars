@@ -183,3 +183,19 @@ function duplicateEncode(word) {
 // console.log(duplicateEncode('recede'));
 // console.log(duplicateEncode('Success'));
 // console.log(duplicateEncode('(( @'));
+
+/**6 kyu
+Replace With Alphabet Position */
+function alphabetPosition(text) {
+  let res = '';
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < text.length; i++) {
+    for (let j = 0; j < alphabet.length; j++) {
+      if (text[i].toLowerCase() === alphabet[j]) {
+        res += j + 1 + ' ';
+      }
+    }
+  }
+  return res.trim();
+}
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
