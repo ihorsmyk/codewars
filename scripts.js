@@ -168,3 +168,18 @@ Array.prototype.sum = function () {
   return this.reduce((pr, el) => pr + el, 0);
 };
 // console.log([1, 3, 6].sum());
+
+/**6 kyu
+Duplicate Encoder */
+function duplicateEncode(word) {
+  // ...
+  let res = '';
+  const arr = word.toLowerCase().split('');
+  const repeat = arr.filter((el, i) => arr.indexOf(el) !== i);
+  arr.forEach(el => (!repeat.includes(el) ? (res += '(') : (res += ')')));
+  return res;
+}
+// console.log(duplicateEncode('din'));
+// console.log(duplicateEncode('recede'));
+// console.log(duplicateEncode('Success'));
+// console.log(duplicateEncode('(( @'));
