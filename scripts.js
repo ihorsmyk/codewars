@@ -199,3 +199,16 @@ function alphabetPosition(text) {
   return res.trim();
 }
 // console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+
+/**6 kyu
+Your order, please */
+function order(words) {
+  // ...
+  return words
+    .split(' ')
+    .sort((a, b) => Number(a.match(/\d/g)) - Number(b.match(/\d/g)))
+    .join(' ');
+}
+console.log(order('is2 Thi1s T4est 3a'));
+console.log(order(''));
+console.log(order('4of Fo1r pe6ople g3ood th5e the2'));
